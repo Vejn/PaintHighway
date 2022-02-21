@@ -1,0 +1,51 @@
+<Cars>:
+    bottom_body_position: self.road_center - self.GAP_SIZE - 25
+    top_body_position: self.road_center + self.GAP_SIZE + 50
+    canvas.before:
+        Rectangle:
+            # Car one
+            size: 144, 67
+            pos: self.pos[0], self.bottom_body_position
+            texture: self.car_body_texture
+            tex_coords: self.lower_car_tex_coords
+        Rectangle:
+            # Truck
+            size: 144, 75
+            pos: self.pos[0], self.top_body_position
+            texture: self.truck_body_texture
+        Rectangle:
+            # Suv
+            size: 144, 70
+            pos: self.pos[0] + 60, self.bottom_body_position -90
+            texture: self.suv_body_texture
+        Rectangle:
+            # Truck 2
+            size: 144, 75
+            pos: self.pos[0], self.bottom_body_position - 190
+            texture: self.truck_two_texture
+        Rectangle:
+            # Car 3
+            size: 144, 67
+            pos: self.pos[0] - 40, self.top_body_position + 90
+            texture: self.car_three_texture
+        Rectangle:
+            # Truck 3
+            size: 144, 75
+            pos: self.pos[0], self.top_body_position + 190
+            texture: self.truck_three_texture
+        Rectangle:
+            # Suv
+            size: 144, 70
+            pos: self.pos[0] + 60, self.top_body_position + 290
+            texture: self.suv_two_texture
+        Rectangle:
+            # Suv 1
+            size: 144, 70
+            pos: self.pos[0], self.bottom_body_position - 280
+            texture: self.suv_one_texture
+        Rectangle:
+            # Car 4
+            size: 144, 70
+            pos: self.pos[0], self.bottom_body_position - 370
+            texture: self.car_four_texture
+

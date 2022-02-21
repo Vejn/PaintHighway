@@ -1,0 +1,33 @@
+#:include cars.kv
+
+FloatLayout:
+    Background:
+        id: background
+        canvas.before:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                texture: self.background_texture
+
+    Label:
+        id: score
+        size_hint_y: None
+        height: 60
+        text: "0"
+        font_size: 40
+    Button:
+        id: start_button
+        text: "Start game"
+        background_normal: "transparent.png"
+        background_down: "transparent.png"
+        on_release:
+            self.disabled = True
+            self.opacity = 0
+            app.start_game()
+
+    Bike:
+        source: "p3.png"
+        size_hint: None, None
+        size: 40, 35
+        pos: 200, root.height / 2.0
+        id: bike
